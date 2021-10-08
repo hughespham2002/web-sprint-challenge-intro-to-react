@@ -1,29 +1,43 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import styled,{keyframes} from "styled-components";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
+const kf = keyframes`
+0% {
+    color: #0cbe13;
+}
+33% {
+  color: #0f37b3;
+}
+66% {
+  color: #9f0d0d;
+}
+100% {
+    color: #0cbe13;
+}
+`
+
 const Style = styled.p`
 font-family: "Comic Sans MS";
 text-align: center;
 max-width: 100%;
 margin-right: 20%;
 margin-left: 20%;
+h2:hover{
+    cursor: pointer;
+    animation: ${kf} 3s infinite;
+}
 `
 
-const TitleList = styled.p`
+const TitleList = styled.h2`
 font-family: "Comic Sans MS";
 text-align: center;
 max-width: 100%;
 margin-right: 20%;
 margin-left: 20%;
-font-size : 10rem
-
-h2 hover{
-    cursor:pointer;
-}
 `
 
 
