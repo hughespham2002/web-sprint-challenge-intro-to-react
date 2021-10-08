@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import styled from "styled-components";
 import Character from './components/Character.js'
 import axios from 'axios';
 
@@ -28,7 +27,7 @@ const App = () => {
   console.log(info)
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <h1 className="Header">Star Wars Characters</h1>
       {
         info.map(character => {
           return (
